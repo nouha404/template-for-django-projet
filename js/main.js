@@ -103,14 +103,14 @@ footer.addEventListener('click', ()=> {
     footerParent = footer.parentElement
     footerParent.removeChild(footer)
     conditionUser = footer.nextElementSibling
+    conditionUser.style.textAlign = 'center'
 
     const newInput = document.createElement('input')
     newInput.type = 'text'
     newInput.placeholder = 'Confirm Password'
     newInput.classList.add('input-animate')
     input.appendChild(newInput)
-
-    console.log(newInput)
+    
 
 })
 
