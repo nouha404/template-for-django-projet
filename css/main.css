@@ -195,6 +195,34 @@ header .light {
     color: black;
 
 }
+.input-animate {
+    animation: inputAn 1s ease-in-out;
+}
+.text-animate {
+    animation: textAn 1s ease-in-out;
+}
+
+@keyframes textAn {
+    0% {
+        transform: translateY(0);
+
+    }
+    100% {
+        transform: translateY(20%);
+    }
+}
+@keyframes inputAn {
+    0% {
+        transform: translateY(100%);
+
+    }
+    99% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 .right .btn {
     display: flex;
     justify-content: center;

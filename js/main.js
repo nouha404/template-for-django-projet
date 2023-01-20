@@ -7,7 +7,7 @@ const input = document.querySelector('.input')
 const btn = document.querySelector('.btn')
 const footer = document.querySelector('footer a')
 const souris = document.getElementById('souris')
-let lampe = true
+
 menuBurger.addEventListener('click', ()=> {
     // menuBurger.classList.toggle("active")
 
@@ -54,11 +54,20 @@ menuBurger.addEventListener('click', ()=> {
                 blocRight.style.background = "black"
                 first_input = input.firstElementChild
                 first_input.style.background = "white"
+                
                 last_input = input.lastElementChild
                 last_input.style.background = "white"
+
                 input.classList.add("newInput")
                 btn.style.background = "white"
                 btn.style.color = "black"
+
+                nextInput = document.querySelector('.input-animate')
+                nextInput.style.background = "white"
+
+                oldInput = document.querySelector('.oldInpt')
+                oldInput.style.background = "white"
+                
                 
                 // input.style.placeHolder = "red"
             } else {
@@ -74,6 +83,8 @@ menuBurger.addEventListener('click', ()=> {
                 blocRight.style.background = ""
                 first_input.style.background = ""
                 last_input.style.background = ""
+                nextInput.style.background = ""
+                oldInput.style.background = ""
                 input.classList.remove("newInput")
                 btn.style.background = ""
                 btn.style.color = ""
@@ -81,21 +92,25 @@ menuBurger.addEventListener('click', ()=> {
 
         })
 
-
-
-
     } 
-    
 
 }) 
 
-
-
-
 footer.addEventListener('click', ()=> {
-    // console.log(creationCompte)
     const text = document.querySelector('.right div p')
     text.innerHTML = "Creez un compte"
+    text.classList.add('text-animate')
+    footerParent = footer.parentElement
+    footerParent.removeChild(footer)
+    conditionUser = footer.nextElementSibling
+
+    const newInput = document.createElement('input')
+    newInput.type = 'text'
+    newInput.placeholder = 'Confirm Password'
+    newInput.classList.add('input-animate')
+    input.appendChild(newInput)
+
+    console.log(newInput)
 
 })
 
@@ -104,18 +119,3 @@ document.addEventListener('mousemove',(e)=>{
     souris.style.left = e.pageX + 'px'
     souris.style.top = e.pageY + 'px'
 })
-// console.log(souris)
-
-// if (menuBurger.classList.contains('active')){
-//     console.log('yep')
-//     header.style.border = 'none';
-    
-// } else {
-// // header.sty
-// console.log('nop')
-// header.style.backgroundColor = 'yellow';
-// header.style.border = "1px solid black"
-// const light = document.querySelector('.light')
-// parentLight = light.parentElement
-// parentLight.removeChild(light)
-// }
