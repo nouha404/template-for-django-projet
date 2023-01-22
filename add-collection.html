@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!-- font -->
+    <title>Ajouter une collection</title>
+</head>
+<body>
+    <header>
+        <h3>MANGA BOOK</h3>
+        <div class="link">
+            <a href="home.html">Acceuil</a>
+            <a href="#">Add Collection</a>
+            <a href="#">Statistique</a>
+        </div>
+        <div class="light">
+            <div class="bounce"></div>
+        </div>
+        <div class="search-and-profil">
+            <div class="searching">
+                <img src="./css/images/icons8-chercher.svg"  alt="icone de recherche" />
+                <input type="search" placeholder="Rechercher..." />
+            </div>
+        </div>
+        <div class="profil">
+            <!-- img a inserer -->
+        </div>
+    </header>
+    <div class="item-tag">
+        <h3>Ajouter a vos collection</h3>
+    </div>
+    <div class="items-bg add-collect">
+        <form action="">
+            <div class="left">
+                <div class="auteur">
+                    <label for="auteur">Auteur</label>
+                    <input type="text" id="auteur" placeholder="Auteur..."/>
+                </div>
+                <div class="nombre-volume">
+                    <label for="nb-volume">Nombre de Volume</label>
+                    <input type="text" id="nb-volume" placeholder="Nombre de Volume..."/>
+                </div>
+                <div class="etat-lecture">
+                    <label for="etat-lecture">Etat de lecture</label>
+                    <select id="etat-lecture">
+                        <option value="en-cours">En cours</option>
+                        <option value="terminer">Terminer</option>
+                    </select>
+                </div>
+                <div class="notes">
+                    <label for="notes">Notes</label>
+                    <textarea id="notes"></textarea>
+                </div>
+            </div>
+            <div class="right">
+                <div class="genre">
+                    <label for="genres">Genre</label>
+                    <input type="text" placeholder="Genre...">
+                </div>
+                <div class="titre">
+                    <label for="titre">Titre</label>
+                    <input type="text" id="titre" placeholder="Titre..."/>
+                </div>
+                <div class="image">
+                    <label for="cover">Cover</label>
+                    <input type="file" accept="images/*" id="cover"/>
+                </div>
+                <div class="descript">
+                    <label for="description">Description</label>
+                    <textarea id="description"></textarea>
+                </div>
+            </div>
+        </form>
+        <div class="button">Ajout de la collection</div>
+    </div>
+    
+    <script src="js/collection.js"></script>
+</body>
+</html>

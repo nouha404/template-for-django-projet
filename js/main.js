@@ -5,6 +5,9 @@ const p = document.querySelector('.text p')
 const blocRight = document.querySelector('.right')
 const input = document.querySelector('.input')
 const btn = document.querySelector('.btn')
+const a = btn.firstElementChild
+// const a = btn.nextElementSibling
+
 const footer = document.querySelector('footer a')
 const souris = document.getElementById('souris')
 
@@ -61,6 +64,7 @@ menuBurger.addEventListener('click', ()=> {
                 input.classList.add("newInput")
                 btn.style.background = "white"
                 btn.style.color = "black"
+                a.style.color= "black"
 
                 nextInput = document.querySelector('.input-animate')
                 nextInput.style.background = "white"
@@ -88,6 +92,7 @@ menuBurger.addEventListener('click', ()=> {
                 input.classList.remove("newInput")
                 btn.style.background = ""
                 btn.style.color = ""
+                a.style.color = ""
             }
 
         })
@@ -103,12 +108,12 @@ footer.addEventListener('click', ()=> {
     footerParent = footer.parentElement
     footerParent.removeChild(footer)
     conditionUser = footer.nextElementSibling
-    conditionUser.style.textAlign = 'center'
 
     const newInput = document.createElement('input')
     newInput.type = 'text'
     newInput.placeholder = 'Confirm Password'
     newInput.classList.add('input-animate')
+    console.log(newInput)
     input.appendChild(newInput)
     
 
